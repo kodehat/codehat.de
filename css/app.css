@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'm5x7';
+    src: url('../fonts/m5x7.ttf') format('truetype');
+}
+
+.ch-pixelfont {
+    font-family: 'm5x7';
+    font-size: 96px !important;
+}
+
+.ch-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.ch-margin-top {
+    margin-top: 2rem;
+}
+
+.ch-icon {
+    margin-right: .25rem;
+    margin-top: .2em;
+}
+
+.ch-nobullets {
+    list-style: none !important;
+}
+
+.ch-icon-contact {
+    margin-top: .19em;
+    margin-right: .5em;
+}
+
+.ch-icon-contact.telegram {
+    color: #279EDA;
+}
+
+.ch-icon-contact.twitter {
+    color: #55ACEE;
+}
+
+/*
+Bulma additions
+*/
+
+.hero.is-brown {
+    background-color: #2A231A;
+    color: #fff;
+}
+
+.hero-body > .content > * {
+    color: #FFF7EF !important;
+}
