@@ -19,7 +19,7 @@
 
 .ch-icon {
     margin-right: .25rem;
-    margin-top: .2em;
+    margin-top: .15em;
 }
 
 .ch-nobullets {
@@ -40,7 +40,7 @@
 }
 
 /*
-Bulma additions
+    Bulma additions
 */
 
 .hero.is-brown {
@@ -48,6 +48,10 @@ Bulma additions
     color: #fff;
 }
 
-.hero-body > .content > * {
+.hero-body > .container > * , .force-white {
     color: #FFF7EF !important;
+}
+
+.force-white:hover {
+    background-color: #403528 !important;
 }
