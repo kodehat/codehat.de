@@ -1,0 +1,15 @@
+{
+  "name": "codehat-website",
+  "version": "1.0.0",
+  "description": "My personal static website.",
+  "main": "index.js",
+  "repository": "https://github.com/Pixelhash/website",
+  "author": "CodeHat <dev@codehat.de>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "minifier": "^0.8.1"
+  },
+  "scripts": {
+    "minify": "node . && mv src/js/app.min.js public/js && mv src/css/app.min.css public/css"
+  }
+}
