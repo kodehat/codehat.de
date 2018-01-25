@@ -10,7 +10,7 @@
     "development": "cross-env NODE_ENV=development parcel index.html",
     "prod": "npm run build",
     "build": "cross-env NODE_ENV=production parcel build index.html",
-    "netlify": "parcel build index.html"
+    "netlify": "parcel build index.html --public-url ./"
   },
   "dependencies": {
     "autoprefixer": "^7.2.4",
