@@ -1,24 +1,21 @@
 {
-  "name": "codehat-website",
+  "name": "website_codehat",
   "version": "1.0.0",
-  "description": "My personal website.",
-  "repository": "https://github.com/Pixelhash/website",
-  "author": "CodeHat <dev@codehat.de>",
-  "license": "GPL-3.0",
+  "description": "My personal website",
   "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development parcel index.html",
-    "prod": "npm run build",
-    "build": "cross-env NODE_ENV=production parcel build index.html",
-    "netlify": "parcel build index.html --public-url ./"
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "CodeHat <dev@codehat.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "laravel-mix": "^2.0.0"
   },
   "dependencies": {
-    "autoprefixer": "^7.2.4",
-    "bulma": "^0.6.1",
+    "buefy": "^0.6.2",
     "cross-env": "^5.1.3",
-    "node-sass": "^4.7.2"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.5.0"
+    "vue-router": "^3.0.1"
   }
 }
