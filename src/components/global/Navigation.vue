@@ -1,10 +1,14 @@
 <template>
     <div class="navigation">
         <div class="container">
-            <div class="tabs is-boxed is-centered">
+            <div class="tabs is-boxed is-centered is-medium">
                 <ul>
-                    <li class="is-active"><a href=".">Home</a></li>
-                    <li><a class="force-white" href="contact.html">Contact</a></li>
+                    <li>
+                        <router-link to="/">Home</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/contact" href="contact.html">Contact</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
