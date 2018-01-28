@@ -1,236 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>CodeHat - Developer</title>
+  <head>
+    <meta charset="utf-8">
+    <title>CodeHat - Software Developer</title>
     <meta name="theme-color" content="#2A231A">
     <meta name="description" content="CodeHat's Website">
     <meta name="author" content="CodeHat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="KZxqk_jThtj1jqiUkPpVBC9eQWxBAJkd2Hoo2xXfYKs" />
-    <link rel="stylesheet" href="assets/styles/app.scss">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-</head>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-<body>
-    <section class="hero is-brown">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-1 ch-pixelfont">
-                    CodeHat
-                </h1>
-                <figure class="image is-128x128 ch-logo animated bounceInDown">
-                    <img src="assets/images/avatar_128x128.png" alt="CodeHat Avatar">
-                </figure>
-                <h3 class="subtitle is-3 ch-margin-top">
-                    💻 Science Student &#8722; Developer
-                </h3>
-                <h5 class="subtitle is-5">
-                    Living in the middle of nowhere in Germany
-                </h5>
-            </div>
-        </div>
-        <div class="hero-foot">
-            <div class="container">
-                <div class="tabs is-boxed is-centered">
-                    <ul>
-                        <li class="is-active"><a href=".">Home</a></li>
-                        <li><a class="force-white" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./src/assets/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./src/assets/images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./static/manifest.json">
+    <link rel="mask-icon" href="./src/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  </head>
+  <body>
+    <div id="app"></div>
 
-    <section class="section">
-        <div class="container has-text-centered">
-            <h1 class="title">Company Projects</h1>
-            <h3 class="subtitle">List of projects I have created for companies (Closed-Source)</h3>
-            <hr>
-            <div class="columns">
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="assets/images/company_querysystem.png" alt="QuerySystem">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                Kind of support site for customers, which allows them to submit requests if they have a problem with their bought product.
-                                <br>
-                                <small>Web Application</small>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a class="card-footer-item" href="http://fahrrad-ass.de">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-building"></i>
-                            </span> Company Website
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="assets/images/company_eventplaner.png" alt="EventPlaner">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                A dashboard for an Event Planning company, which stores all events and shows the revenue.
-                                <br>
-                                <small>Web Application</small>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a class="card-footer-item" href="https://stormarn-events.de">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-building"></i>
-                            </span> Company Website
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container has-text-centered">
-            <h1 class="title">Java Projects</h1>
-            <h3 class="subtitle">My current Java projects (Open Source)</h3>
-            <hr>
-            <div class="columns">
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="assets/images/java_signcolors.png" alt="SignColors">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                SignColors allows players on your <a>#Minecraft</a> server to add colored text to signs.
-                                <br>
-                                <small>Spigot Plugin - <span id="signcolors">...</span> for Spigot 1.11.2<br>
-                                Updated at <span id="signcolors_updatetime">...</span></small>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a class="card-footer-item" href="https://www.spigotmc.org/resources/signcolors.6135">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-globe"></i>
-                            </span> Project Website
-                            </a>
-                            <a class="card-footer-item" href="https://github.com/Pixelhash/SignColors">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-github"></i>
-                            </span> Source
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="assets/images/java_playersupport.png" alt="PlayerSupport">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                PlayerSupport allows players on your <a>#Minecraft</a> server to request help with a simple command.
-                                <br>
-                                <small>Spigot Plugin - <span id="playersupport">...</span> for Spigot 1.11.2<br>
-                                Updated at <span id="playersupport_updatetime">...</span></small>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a class="card-footer-item" href="https://www.spigotmc.org/resources/playersupport.11255">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-globe"></i>
-                            </span> Project Website
-                            </a>
-                            <a class="card-footer-item" href="https://github.com/Pixelhash/PlayerSupport">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-github"></i>
-                            </span> Source
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="assets/images/java_mcwrapper.png" alt="PlayerSupport">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                A simple <a>#Minecraft</a> Server Wrapper (for Spigot, Bukkit, ...), which provides a console for your browser
-                                <br>
-                                <small>Wrapper - Not yet ready for production!</small>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a class="card-footer-item is-disabled" href="https://www.spigotmc.org/resources/playersupport.11255">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-globe"></i>
-                            </span>
-                                <del>Project Website</del>
-                            </a>
-                            <a class="card-footer-item" href="https://github.com/Pixelhash/mcwrapper">
-                                <span class="icon is-small ch-icon">
-                                <i class="fa fa-github"></i>
-                            </span> Source
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-third has-text-centered">
-                    <ul class="ch-hor-list">
-                        <!--<li><a href=".">Home</a></li>-->
-                        <li><a href="imprint.html">Imprint</a></li>
-                        <li><a href="disclaimer.html">Disclaimer</a></li>
-                        <!--<li><a href="contact.html">Contact</a></li>-->
-                    </ul>
-                </div>
-                <div class="column is-third has-text-centered">
-                    <p>&copy; CodeHat 2017</p>
-                </div>
-                <div class="column is-third has-text-centered">
-                    This website is licensed <a href="https://www.gnu.org/licenses/gpl-3.0.de.html">GPL-3.0</a>.
-                    <br><br>
-                    <a class="icon" href="https://github.com/PixelHash/website">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/app.js"></script>
-</body>
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script type="text/javascript" src="./src/projects.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
 </html>
