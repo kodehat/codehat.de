@@ -28,12 +28,12 @@
 </template>
 
 <script>
-    export default {
-        name: 'footer',
-        data() {
-            return {
-                year: new Date().getFullYear()
-            }
-        },
-    }
+export default {
+  name: "footer",
+  data() {
+    return {
+      year: new Date().getFullYear()
+    };
+  }
+};
 </script>
