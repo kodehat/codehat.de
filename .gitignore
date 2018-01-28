@@ -4,3 +4,4 @@ node_modules/
 dist/
 hot
 mix-manifest.json
+yarn-error.log
