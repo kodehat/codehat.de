@@ -100,7 +100,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'projects',
-    }
+export default {
+  name: "projects"
+};
 </script>

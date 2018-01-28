@@ -28,9 +28,9 @@
 </template>
 
 <script>
-    export default {
-        name: 'navigation',
-    }
+export default {
+  name: "navigation"
+};
 </script>
 
 <style>
