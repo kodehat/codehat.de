@@ -10,6 +10,12 @@
                         </router-link>
                     </li>
                     <li>
+                        <router-link to="/projects">
+                            <span class="icon is-small"><i class="fa fa-briefcase"></i></span>
+                            <span>Projects</span>
+                        </router-link>
+                    </li>
+                    <li>
                         <router-link to="/contact">
                             <span class="icon is-small"><i class="fa fa-address-book"></i></span>
                             <span>Contact</span>
