@@ -4,10 +4,16 @@
             <div class="tabs is-boxed is-centered is-medium">
                 <ul>
                     <li>
-                        <router-link to="/">Home</router-link>
+                        <router-link to="/">
+                            <span class="icon is-small"><i class="fa fa-home"></i></span>
+                            <span>Home</span>
+                        </router-link>
                     </li>
                     <li>
-                        <router-link to="/contact" href="contact.html">Contact</router-link>
+                        <router-link to="/contact">
+                            <span class="icon is-small"><i class="fa fa-address-book"></i></span>
+                            <span>Contact</span>
+                        </router-link>
                     </li>
                 </ul>
             </div>

@@ -12,7 +12,7 @@
                     </ul>
                 </div>
                 <div class="column is-third has-text-centered">
-                    <p>&copy; CodeHat 2018</p>
+                    <p>&copy; CodeHat {{ year }}</p>
                 </div>
                 <div class="column is-third has-text-centered">
                     This website is licensed <a href="https://choosealicense.com/licenses/mit/">MIT</a>.
@@ -30,5 +30,10 @@
 <script>
     export default {
         name: 'footer',
+        data() {
+            return {
+                year: new Date().getFullYear()
+            }
+        },
     }
 </script>
