@@ -101,21 +101,16 @@
 
 <script>
 import axios from "axios";
-import moment from "moment";
-import "moment/locale/de";
 import VueCookie from "vue-cookie";
-
-console.log("Current locale: " + VueCookie.get("locale") || "en");
-moment.locale(VueCookie.get("locale") || "en");
 
 export default {
   name: "projects",
   data() {
     return {
-      signcolorsText: {},
-      signcolorsDate: {},
-      playersupportText: {},
-      playersupportDate: {}
+      signcolorsText: "...",
+      signcolorsDate: "...",
+      playersupportText: "...",
+      playersupportDate: "..."
     };
   },
   created() {
@@ -124,7 +119,7 @@ export default {
       .get("https://api.codehat.de/plugin/1")
       .then(response => {
         this.signcolorsText = "v" + response.data.version;
-        this.signcolorsDate = moment(response.data.updated_at).format(
+        this.signcolorsDate = this.$moment(response.data.updated_at).format(
           "Do MMM YYYY, HH:mm"
         );
       })
@@ -137,7 +132,7 @@ export default {
       .get("https://api.codehat.de/plugin/2")
       .then(response => {
         this.playersupportText = "v" + response.data.version;
-        this.playersupportDate = moment(response.data.updated_at).format(
+        this.playersupportDate = this.$moment(response.data.updated_at).format(
           "Do MMM YYYY, HH:mm"
         );
       })
