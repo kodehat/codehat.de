@@ -17,8 +17,8 @@
                             <div class="content">
                                 SignColors allows players on your <a>#Minecraft</a> server to add colored text to signs.
                                 <br>
-                                <small>Spigot Plugin - <span id="signcolors">...</span> for Spigot 1.11.2<br>
-                                Updated at <span id="signcolors_updatetime">...</span></small>
+                                <small>Spigot Plugin - <span id="signcolors">{{ signcolorsText }}</span> for Spigot 1.11.2<br>
+                                Updated at <span id="signcolors_updatetime">{{ signcolorsDate }}</span></small>
                             </div>
                         </div>
                         <footer class="card-footer">
@@ -46,8 +46,8 @@
                             <div class="content">
                                 PlayerSupport allows players on your <a>#Minecraft</a> server to request help with a simple command.
                                 <br>
-                                <small>Spigot Plugin - <span id="playersupport">...</span> for Spigot 1.11.2<br>
-                                Updated at <span id="playersupport_updatetime">...</span></small>
+                                <small>Spigot Plugin - <span id="playersupport">{{ playersupportText }}</span> for Spigot 1.11.2<br>
+                                Updated at <span id="playersupport_updatetime">{{ playersupportDate }}</span></small>
                             </div>
                         </div>
                         <footer class="card-footer">
@@ -100,7 +100,50 @@
 </template>
 
 <script>
+import axios from "axios";
+import moment from "moment";
+import "moment/locale/de";
+import VueCookie from "vue-cookie";
+
+console.log("Current locale: " + VueCookie.get("locale") || "en");
+moment.locale(VueCookie.get("locale") || "en");
+
 export default {
-  name: "projects"
+  name: "projects",
+  data() {
+    return {
+      signcolorsText: {},
+      signcolorsDate: {},
+      playersupportText: {},
+      playersupportDate: {}
+    };
+  },
+  created() {
+    // Set 'SignColors' version and update date
+    axios
+      .get("https://api.codehat.de/plugin/1")
+      .then(response => {
+        this.signcolorsText = "v" + response.data.version;
+        this.signcolorsDate = moment(response.data.updated_at).format(
+          "Do MMM YYYY, HH:mm"
+        );
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    // Set 'PlayerSupport' version and update date
+    axios
+      .get("https://api.codehat.de/plugin/2")
+      .then(response => {
+        this.playersupportText = "v" + response.data.version;
+        this.playersupportDate = moment(response.data.updated_at).format(
+          "Do MMM YYYY, HH:mm"
+        );
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 };
 </script>

@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="hero-foot">
-        <!--<locale-switcher :locales="['en', 'de']" :show-full="true" ></locale-switcher>-->
+        <locale-switcher :locales="['en', 'de']" :show-full="true" ></locale-switcher>
         <my-navigation></my-navigation>
       </div>
     </section>

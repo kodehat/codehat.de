@@ -31,6 +31,7 @@ const localeStrings = {
 };
 
 Vue.config.lang = VueCookie.get("locale") || "en";
+
 console.log(
   "Locale from cookie = " +
     Vue.config.lang +

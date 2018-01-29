@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueI18n from "vue-i18n";
+import VueCookie from "vue-cookie";
 
 // Import locale files
 import en from "../assets/locales/en";
@@ -14,6 +15,6 @@ const messages = {
 };
 
 export default new VueI18n({
-  locale: "en",
+  locale: VueCookie.get("locale") || "en",
   messages
 });
