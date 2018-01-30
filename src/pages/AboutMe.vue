@@ -44,7 +44,9 @@ export default {
   },
   created() {
     axios
-      .get("http://quotes.stormconsultancy.co.uk/random.json")
+      .get(
+        "https://cors-anywhere.herokuapp.com/http://quotes.stormconsultancy.co.uk/random.json"
+      )
       .then(response => {
         this.quote.message = response.data.quote;
         this.quote.author = response.data.author;
