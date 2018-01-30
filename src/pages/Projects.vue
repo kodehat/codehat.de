@@ -120,7 +120,7 @@ export default {
       .then(response => {
         this.signcolorsText = "v" + response.data.version;
         this.signcolorsDate = this.$moment(response.data.updated_at).format(
-          "Do MMM YYYY, HH:mm"
+          "Do MMMM YYYY, HH:mm"
         );
       })
       .catch(error => {
@@ -133,7 +133,7 @@ export default {
       .then(response => {
         this.playersupportText = "v" + response.data.version;
         this.playersupportDate = this.$moment(response.data.updated_at).format(
-          "Do MMM YYYY, HH:mm"
+          "Do MMMM YYYY, HH:mm"
         );
       })
       .catch(error => {

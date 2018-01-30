@@ -1,8 +1,8 @@
 <template>
-    <div class="home">
+    <div class="about-me">
         <section class="section">
         <div class="container has-text-centered">
-            <p>Home</p>
+            <p>About me</p>
         </div>
     </section>
     </div>
@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: "home"
+  name: "about-me"
 };
 </script>

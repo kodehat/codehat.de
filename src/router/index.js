@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "../pages/Home";
+import AboutMe from "../pages/AboutMe";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import Imprint from "../pages/Imprint";
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Home",
-      component: Home
+      name: "AboutMe",
+      component: AboutMe
     },
     {
       path: "/projects",

@@ -1,33 +1,31 @@
 <template>
-  <div class="locale-switcher">
     <!-- {{ initLocale() }} -->
-    <b-dropdown hoverable>
-        <button class="button is-info" slot="trigger">
-            <span>Select language</span>
-            <b-icon icon="menu-down"></b-icon>
-        </button>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        🌍 Language
+      </a>
 
-        <b-dropdown-item
-        class="locale-link"
+      <div class="navbar-dropdown">
+        <a
+        class="navbar-item"
         v-for="locale in locales"
         :key="locale.id"
         @click="setLocale(locale)"
         href="#">
         {{ getLanguageString(locale) }}
-        </b-dropdown-item>
-    </b-dropdown>
-  </div>
+        </a>
+      </div>
+    </div>
 </template>
 
 <script>
 import Vue from "vue";
-// Restore locale from cookie, if it was set
 import VueCookie from "vue-cookie";
 Vue.use(VueCookie);
 
 const localeStrings = {
-  en: "English",
-  de: "Deutsch"
+  en: "🇺🇸 English",
+  de: "🇩🇪 Deutsch"
 };
 
 Vue.config.lang = VueCookie.get("locale") || "en";

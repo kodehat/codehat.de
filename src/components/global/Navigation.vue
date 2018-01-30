@@ -5,20 +5,20 @@
                 <ul>
                     <li>
                         <router-link to="/">
-                            <span class="icon is-small"><i class="fa fa-home"></i></span>
-                            <span>Home</span>
+                            <span class="icon is-small"><i class="fa fa-user"></i></span>
+                            <span>{{ $t("tabs.about") }}</span>
                         </router-link>
                     </li>
                     <li>
                         <router-link to="/projects">
                             <span class="icon is-small"><i class="fa fa-briefcase"></i></span>
-                            <span>Projects</span>
+                            <span>{{ $t("tabs.projects") }}</span>
                         </router-link>
                     </li>
                     <li>
                         <router-link to="/contact">
                             <span class="icon is-small"><i class="fa fa-address-book"></i></span>
-                            <span>Contact</span>
+                            <span>{{ $t("tabs.contact") }}</span>
                         </router-link>
                     </li>
                 </ul>

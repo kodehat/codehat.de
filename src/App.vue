@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <section class="hero is-primary">
+      <top-navbar></top-navbar>
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title is-1 special-font">
+          <!--<h1 class="title is-1 special-font big">
             CodeHat
-          </h1>
+          </h1>-->
           <figure class="image is-128x128 img-center animated bounceInDown">
             <img src="./assets/images/avatar_128x128.png" alt="CodeHat Avatar">
           </figure>
           <h3 class="subtitle is-3 some-margin-top">
-            {{ $t("messages.job") }} &#8722; Computer Science Student
+            {{ $t("messages.job") }} &#8722; {{ $t("messages.education") }}
           </h3>
           <h5 class="subtitle is-5">
-            <a href="https://www.fh-luebeck.de/">FH-L&uuml;beck</a> - Germany
+            <a href="https://www.fh-luebeck.de/">🏫 FH-L&uuml;beck</a> &#8722; 🇩🇪 {{ $t("messages.origin") }}
           </h5>
         </div>
       </div>
       <div class="hero-foot">
-        <locale-switcher :locales="['en', 'de']" :show-full="true" ></locale-switcher>
         <my-navigation></my-navigation>
       </div>
     </section>
@@ -31,15 +31,15 @@
 
 <script>
 import MyNavigation from "./components/global/Navigation";
+import TopNavbar from "./components/global/TopNavbar";
 import MyFooter from "./components/global/Footer";
-import LocaleSwitcher from "./components/global/LocaleSwitcher";
 
 export default {
   name: "app",
   components: {
     MyNavigation,
-    MyFooter,
-    LocaleSwitcher
+    TopNavbar,
+    MyFooter
   }
 };
 </script>
@@ -81,6 +81,9 @@ $link: #0f5f3e;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+// Navbar
+$navbar-dropdown-background-color: $primary;
+
 // Import Bulma and Buefy styles
 @import "../node_modules/bulma/bulma";
 @import "../node_modules/buefy/src/scss/buefy";
@@ -98,6 +101,9 @@ $link-focus-border: $primary;
 .special-font {
   font-family: "Supermercado One", cursive;
   //font-family: $pixel-font;
+}
+
+.special-font.big {
   font-size: 96px !important;
   font-weight: 200 !important;
 }
