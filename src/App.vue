@@ -10,7 +10,8 @@
           <figure class="image is-128x128 img-center animated bounceInDown">
             <img src="./assets/images/avatar_128x128.png" alt="CodeHat Avatar">
           </figure>
-          <h4 class="subtitle is-4 some-margin-top">
+          <h4 class="title is-4 some-margin-top">CodeHat</h4>
+          <h4 class="subtitle is-4">
             {{ $t("messages.job") }} &#9679; {{ $t("messages.education") }}
           </h4>
           <h6 class="subtitle is-6">

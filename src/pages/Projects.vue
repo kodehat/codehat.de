@@ -3,8 +3,7 @@
         <section class="section">
             <div class="container">
                 <div class="content">
-                    <h2 class="title is-2">Projects</h2>
-                    <h4 class="subtitle is-4">My current projects (Open Source)</h4>
+                    <h2 class="title is-2">{{ $t("tabs.projects") }}</h2>
                     <hr>
                 </div>
             <div class="columns">

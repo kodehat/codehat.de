@@ -4,6 +4,7 @@
             <div class="container">
                 <div class="content">
                     <h2 class="title is-2">Impressum</h2>
+                    <h4 class="subtitle is-4">Nur auf Deutsch verfügbar!</h4>
                     <hr>
                     <p>
                         <strong>Angaben gem&auml;&szlig; &sect; 5 TMG</strong><br/><br/>

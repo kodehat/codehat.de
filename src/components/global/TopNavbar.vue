@@ -3,9 +3,9 @@
         <nav class="navbar is-primary">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item">
+                    <router-link to="/" class="navbar-item">
                         <h3 class="title is-3 special-font small">CodeHat</h3>
-                    </a>
+                    </router-link>
                     <a class="navbar-item is-hidden-desktop" href="https://github.com/Pixelhash" target="_blank">
                         <span class="icon" style="color: lightgrey;">
                             <i class="fa fa-lg fa-github"></i>
