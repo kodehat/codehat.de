@@ -2,7 +2,7 @@
     <div class="imprint">
         <section class="section">
             <div class="container">
-                <div class="content is-medium">
+                <div class="content">
                     <h2 class="title is-2">Impressum</h2>
                     <hr>
                     <p>

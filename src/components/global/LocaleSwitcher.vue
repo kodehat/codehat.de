@@ -2,7 +2,7 @@
     <!-- {{ initLocale() }} -->
     <div class="navbar-item has-dropdown is-hoverable">
       <a class="navbar-link">
-        🌍 Language
+        🌍 {{ $t("messages.language") }}
       </a>
 
       <div class="navbar-dropdown">

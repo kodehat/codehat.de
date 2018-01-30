@@ -10,12 +10,12 @@
           <figure class="image is-128x128 img-center animated bounceInDown">
             <img src="./assets/images/avatar_128x128.png" alt="CodeHat Avatar">
           </figure>
-          <h3 class="subtitle is-3 some-margin-top">
-            {{ $t("messages.job") }} &#8722; {{ $t("messages.education") }}
-          </h3>
-          <h5 class="subtitle is-5">
-            <a href="https://www.fh-luebeck.de/">🏫 FH-L&uuml;beck</a> &#8722; 🇩🇪 {{ $t("messages.origin") }}
-          </h5>
+          <h4 class="subtitle is-4 some-margin-top">
+            {{ $t("messages.job") }} &#9679; {{ $t("messages.education") }}
+          </h4>
+          <h6 class="subtitle is-6">
+            <a href="https://www.fh-luebeck.de/">🏫 FH-L&uuml;beck</a> &#9679; 🇩🇪 {{ $t("messages.origin") }}
+          </h6>
         </div>
       </div>
       <div class="hero-foot">

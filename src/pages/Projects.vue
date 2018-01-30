@@ -1,10 +1,12 @@
 <template>
     <div class="projects">
         <section class="section">
-        <div class="container has-text-centered">
-            <h1 class="title">Java Projects</h1>
-            <h3 class="subtitle">My current Java projects (Open Source)</h3>
-            <hr>
+            <div class="container">
+                <div class="content">
+                    <h2 class="title is-2">Projects</h2>
+                    <h4 class="subtitle is-4">My current projects (Open Source)</h4>
+                    <hr>
+                </div>
             <div class="columns">
                 <div class="column is-one-third">
                     <div class="card">
@@ -14,7 +16,7 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <div class="content">
+                            <div class="content has-text-centered">
                                 SignColors allows players on your <a>#Minecraft</a> server to add colored text to signs.
                                 <br>
                                 <small>Spigot Plugin - <span id="signcolors">{{ signcolorsText }}</span> for Spigot 1.11.2<br>
@@ -43,7 +45,7 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <div class="content">
+                            <div class="content has-text-centered">
                                 PlayerSupport allows players on your <a>#Minecraft</a> server to request help with a simple command.
                                 <br>
                                 <small>Spigot Plugin - <span id="playersupport">{{ playersupportText }}</span> for Spigot 1.11.2<br>
@@ -72,7 +74,7 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <div class="content">
+                            <div class="content has-text-centered">
                                 A simple <a>#Minecraft</a> Server Wrapper (for Spigot, Bukkit, ...), which provides a console for your browser
                                 <br>
                                 <small>Wrapper - Not yet ready for production!</small>
@@ -95,7 +97,7 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
     </div>
 </template>
 

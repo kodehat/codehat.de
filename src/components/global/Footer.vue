@@ -6,10 +6,10 @@
                     <div class="column is-third has-text-centered">
                         <ul class="ch-hor-list">
                             <li>
-                                <router-link to="/imprint">Imprint</router-link>
+                                <router-link to="/imprint">{{ $t("footer.imprint") }}</router-link>
                             </li>
                             <li>
-                                <a href="disclaimer.html">Disclaimer</a>
+                                <a href="disclaimer.html">{{ $t("footer.privacyPolicy") }}</a>
                             </li>
                         </ul>
                     </div>
@@ -17,7 +17,7 @@
                         <p>&copy; CodeHat {{ year }}</p>
                     </div>
                     <div class="column is-third has-text-centered">
-                        Source code licensed
+                        {{ $t("footer.licenseText") }}
                         <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
                         <br><br>
                         <a class="icon" href="https://github.com/PixelHash/website">
