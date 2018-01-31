@@ -23,7 +23,7 @@
                     <h3 class="title is-3">Umsatzsteuer-ID</h3>
                     <p>
                         Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect;27 a Umsatzsteuergesetz<br/>
-                        DEXXXXXXXXX<br/>
+                        DE313867855<br/>
                     </p>
                     <h3 class="title is-3">Haftungsausschluss</h3>
                     <p>
