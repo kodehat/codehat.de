@@ -1,21 +1,16 @@
 <template>
-    <!-- {{ initLocale() }} -->
-    <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">
-        🌍 {{ $t("messages.language") }}
-      </a>
+  <!-- {{ initLocale() }} -->
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      <span class="ec ec-earth-africa emoji-fix"></span> {{ $t("messages.language") }}
+    </a>
 
-      <div class="navbar-dropdown">
-        <a
-        class="navbar-item"
-        v-for="locale in locales"
-        :key="locale.id"
-        @click="setLocale(locale)"
-        href="#">
-        {{ getLanguageString(locale) }}
-        </a>
-      </div>
+    <div class="navbar-dropdown">
+      <a class="navbar-item" v-for="locale in locales" :key="locale.id" @click="setLocale(locale)" href="#">
+        <div v-html="getLanguageString(locale)"></div>
+      </a>
     </div>
+  </div>
 </template>
 
 <script>
@@ -24,8 +19,8 @@ import VueCookie from "vue-cookie";
 Vue.use(VueCookie);
 
 const localeStrings = {
-  en: "🇺🇸 English",
-  de: "🇩🇪 Deutsch"
+  en: "<span class='ec ec-hamburger'></span> English",
+  de: "<span class='ec ec-beer emoji-fix'></span> Deutsch"
 };
 
 Vue.config.lang = VueCookie.get("locale") || "en";

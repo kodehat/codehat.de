@@ -15,7 +15,9 @@
             {{ $t("messages.job") }} &#9679; {{ $t("messages.education") }}
           </h4>
           <h6 class="subtitle is-6">
-            <a href="https://www.fh-luebeck.de/">🏫 FH-L&uuml;beck</a> &#9679; 🇩🇪 {{ $t("messages.origin") }}
+            <a href="https://www.fh-luebeck.de/">
+              <span class="ec ec-school emoji-fix"></span> FH-L&uuml;beck</a> &#9679;
+            <span class="ec ec-beer emoji-fix"></span> {{ $t("messages.origin") }}
           </h6>
         </div>
       </div>
@@ -115,5 +117,11 @@ $navbar-dropdown-background-color: $primary;
 
 .some-margin-top {
   margin-top: 2rem;
+}
+
+.emoji-fix {
+  padding-top: 0.2em;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
 }
 </style>
