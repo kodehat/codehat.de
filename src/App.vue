@@ -16,8 +16,7 @@
           </h4>
           <h6 class="subtitle is-6">
             <a href="https://www.fh-luebeck.de/">
-              <span class="ec ec-school emoji-fix"></span> FH-L&uuml;beck</a> &#9679;
-            <span class="ec ec-beer emoji-fix"></span> {{ $t("messages.origin") }}
+              🏫 FH-L&uuml;beck</a> &#9679; {{ $t("messages.origin") }}
           </h6>
         </div>
       </div>

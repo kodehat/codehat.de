@@ -2,7 +2,7 @@
   <!-- {{ initLocale() }} -->
   <div class="navbar-item has-dropdown is-hoverable">
     <a class="navbar-link">
-      <span class="ec ec-earth-africa emoji-fix"></span> {{ $t("messages.language") }}
+      🌍 {{ $t("messages.language") }}
     </a>
 
     <div class="navbar-dropdown">
@@ -19,8 +19,8 @@ import VueCookie from "vue-cookie";
 Vue.use(VueCookie);
 
 const localeStrings = {
-  en: "<span class='ec ec-hamburger'></span> English",
-  de: "<span class='ec ec-beer emoji-fix'></span> Deutsch"
+  en: "English",
+  de: "Deutsch"
 };
 
 Vue.config.lang = VueCookie.get("locale") || "en";
