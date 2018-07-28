@@ -16,17 +16,17 @@
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
     "parcel-plugin-vue": "^1.5.0",
-    "prettier": "1.11.1"
+    "prettier": "^1.13.7"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "buefy": "^0.6.2",
-    "moment": "^2.20.1",
-    "vue": "^2.5.13",
+    "buefy": "^0.6.6",
+    "moment": "^2.22.2",
+    "vue": "^2.5.16",
     "vue-cookie": "^1.1.4",
     "vue-i18n": "^7.4.1",
     "vue-momentjs": "^0.1.1",
     "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.16"
   }
 }
