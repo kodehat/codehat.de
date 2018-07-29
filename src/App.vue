@@ -8,7 +8,7 @@
             CodeHat
           </h1>-->
           <figure class="image is-128x128 img-center animated bounceInDown">
-            <img src="./assets/images/avatar_128x128.png" alt="CodeHat Avatar">
+            <img src="./assets/images/codehat_logo.png" alt="CodeHat Avatar">
           </figure>
           <h4 class="title is-4 some-margin-top">CodeHat</h4>
           <h4 class="subtitle is-4">
@@ -59,7 +59,7 @@ $pixel-font: "m5x7", sans-serif;
 @import "../node_modules/bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #2a231a;
+$primary: #d0a465;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
@@ -79,7 +79,7 @@ $colors: (
 );
 
 // Links
-$link: #0f5f3e;
+$link: #513000;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
