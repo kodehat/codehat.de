@@ -1,0 +1,49 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Software Developer"
+theme = "anatole"
+enableEmoji = true
+summarylength = 10
+
+[params]
+title = "I'm CodeHat"
+author = "🎩 CodeHat"
+description = "Call me Marc"
+profilePicture = "images/profile.png"
+
+[[params.socialIcons]]
+icon = "fa-envelope"
+title = "E-Mail"
+url = "mailto:dev+website@codehat.de"
+
+[[params.socialIcons]]
+icon = "fa-github"
+title = "GitHub"
+url = "https://github.com/kodehat/"
+
+[[params.socialIcons]]
+icon = "fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/CodeHat/"
+
+## Menu items
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/posts/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
