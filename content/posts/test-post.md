@@ -1,8 +1,8 @@
 ---
 title: "Test Post"
-description: "Guide to emoji usage in Hugo"
+description: "Just a post to test features."
 date: 2020-08-10T10:17:58+02:00
-draft: true
+draft: false
 tags: [
     "test"
 ]
