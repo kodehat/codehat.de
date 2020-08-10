@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.codehat.de/"
 languageCode = "en-us"
 title = "Software Developer"
 theme = "anatole"
