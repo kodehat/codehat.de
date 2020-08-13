@@ -14,7 +14,12 @@ profilePicture = "images/profile.png"
 [[params.socialIcons]]
 icon = "fa-envelope"
 title = "E-Mail"
-url = "mailto:dev+website@codehat.de"
+url = "mailto:dev@codehat.de"
+
+[[params.socialIcons]]
+icon = "fa-key"
+title = "PGP Key"
+url = "/CodeHat_0xA0D21575_public.asc"
 
 [[params.socialIcons]]
 icon = "fa-github"
