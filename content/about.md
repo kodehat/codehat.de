@@ -6,8 +6,9 @@ aliases = ["about-us","about-codehat","contact"]
 author = "CodeHat"
 +++
 
-**HayHo!**  
-I'm CodeHat and you're currently viewing my website.  
+HayHo!  
+
+I'm CodeHat and you're currently viewing my website.
 I like learning new technologies like Vue.js or Kotlin, but primary I focus on Java. That's the reason why I'm maintaining some plugins on SpigotMC.org.
 
 You can take a look at my **projects** by visiting the **`Projects`** page above.

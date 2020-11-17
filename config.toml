@@ -7,27 +7,28 @@ summarylength = 10
 
 [params]
 title = "I'm CodeHat"
-author = "🎩 CodeHat"
+author = "CodeHat"
 description = "Call me Marc"
 profilePicture = "images/profile.png"
+favicon = "favicons/"
 
 [[params.socialIcons]]
-icon = "fa-envelope"
+icon = "fas fa-envelope"
 title = "E-Mail"
 url = "mailto:dev@codehat.de"
 
 [[params.socialIcons]]
-icon = "fa-key"
+icon = "fas fa-key"
 title = "PGP Key"
 url = "/CodeHat_0xA0D21575_public.asc"
 
 [[params.socialIcons]]
-icon = "fa-github"
+icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/kodehat/"
 
 [[params.socialIcons]]
-icon = "fa-twitter"
+icon = "fab fa-twitter"
 title = "Twitter"
 url = "https://twitter.com/CodeHat/"
 
@@ -52,3 +53,9 @@ url = "https://twitter.com/CodeHat/"
   weight = 300
   identifier = "about"
   url = "/about/"
+
+  [[menu.main]]
+  name = "Legal Details"
+  weight = 400
+  identifier = "legal-details"
+  url = "/legal-details/"
