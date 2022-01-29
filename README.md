@@ -34,7 +34,7 @@ Set the following environment variables:
 | :----------------- | :--------- |
 | HUGO_ENABLEGITINFO | true       |
 | HUGO_ENV           | production |
-| HUGO_VERSION       | 0.74.3     |
+| HUGO_VERSION       | 0.92.1     |
 
 ## Usage example
 

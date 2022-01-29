@@ -11,6 +11,16 @@ author = "CodeHat"
 description = "Call me Marc"
 profilePicture = "images/profile.png"
 favicon = "favicons/"
+doNotLoadAnimations = true
+enableRobotsTXT = true
+contentratio = 0.7
+mainSections = []
+googleFonts = [
+  "Ubuntu"
+]
+customCss = [
+  "css/styles.css"
+]
 
 [[params.socialIcons]]
 icon = "fas fa-envelope"
