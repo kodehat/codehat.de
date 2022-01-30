@@ -22,6 +22,10 @@ customCss = [
   "css/styles.css"
 ]
 
+[params.plausibleAnalytics]
+domain = "codehat.de"
+serverURL = "https://analytics.thisismy.cloud"
+
 [[params.socialIcons]]
 icon = "fas fa-envelope"
 title = "E-Mail"
