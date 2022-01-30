@@ -3,18 +3,20 @@ languageCode = "en-us"
 title = "Software Developer"
 theme = "anatole"
 enableEmoji = true
+enableGitInfo = true
 summarylength = 10
 
 [params]
-title = "I'm CodeHat"
+title = "I'm Marc"
 author = "CodeHat"
-description = "Call me Marc"
+description = "Software Developer"
 profilePicture = "images/profile.png"
 favicon = "favicons/"
 doNotLoadAnimations = true
 enableRobotsTXT = true
 contentratio = 0.7
 mainSections = []
+postSectionName = "blog"
 googleFonts = [
   "Ubuntu"
 ]
@@ -57,16 +59,16 @@ url = "https://twitter.com/CodeHat/"
   url = "/"
 
   [[menu.main]]
-  name = "Posts"
+  name = "Blog"
   weight = 200
-  identifier = "posts"
-  url = "/posts/"
+  identifier = "blog"
+  url = "/blog/"
 
   [[menu.main]]
-  name = "About"
+  name = "Version"
   weight = 300
-  identifier = "about"
-  url = "/about/"
+  identifier = "version"
+  url = "/version/"
 
   [[menu.main]]
   name = "Legal Details"
