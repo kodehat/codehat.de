@@ -6,6 +6,6 @@ aliases = ["git"]
 author = "CodeHat"
 +++
 
-The website is hosted on Netlify with the source being on GitHub.
+The website is hosted on [Cloudflare Pages](https://pages.cloudflare.com/) with the source being on [GitHub](https://github.com/kodehat/codehat.de/).
 
 Current version is `{{< git-info >}}`.
