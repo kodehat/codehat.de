@@ -1,3 +1,7 @@
 {{- with .Page.GitInfo }}
-  {{ .AbbreviatedHash }}
+  {{- with $.Site.Params.gitUrl }}
+    <a href="{{ . }}/commit/{{ $.Page.GitInfo.AbbreviatedHash }}" target="_blank" rel="noopener noreferrer">{{ $.Page.GitInfo.AbbreviatedHash }}</a>
+  {{- else }}
+    {{ .AbbreviatedHash }}
+  {{- end }}
 {{- end }}

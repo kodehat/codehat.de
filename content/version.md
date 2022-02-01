@@ -8,4 +8,4 @@ author = "CodeHat"
 
 The website is hosted on Netlify with the source being on GitHub.
 
-Current version hash is: {{% git-info %}}
+Current version is `{{< git-info >}}`.

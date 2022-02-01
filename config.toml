@@ -6,10 +6,19 @@ enableEmoji = true
 enableGitInfo = true
 summarylength = 10
 
+[outputs]
+home = ["HTML"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
+
 [params]
-title = "I'm Marc"
+title = "I'm CodeHat"
 author = "CodeHat"
-description = "Software Developer"
+description = """
+Call me Marc
+Software Developer
+"""
 profilePicture = "images/profile.png"
 favicon = "favicons/"
 doNotLoadAnimations = true
@@ -17,12 +26,14 @@ enableRobotsTXT = true
 contentratio = 0.7
 mainSections = []
 postSectionName = "blog"
-googleFonts = [
-  "Ubuntu"
-]
+rssFullContent = true
+#googleFonts = [
+#  "Roboto+Slab:wght@100;400;700"
+#]
 customCss = [
   "css/styles.css"
 ]
+gitUrl = "https://github.com/kodehat/codehat.de"
 
 [params.plausibleAnalytics]
 domain = "codehat.de"
@@ -65,13 +76,25 @@ url = "https://twitter.com/CodeHat/"
   url = "/blog/"
 
   [[menu.main]]
-  name = "Version"
+  name = "Projects"
   weight = 300
+  identifier = "projects"
+  url = "/projects/"
+
+  [[menu.main]]
+  name = "Contact"
+  weight = 400
+  identifier = "contact"
+  url = "/contact/"
+
+  [[menu.footer]]
+  name = "Version"
+  weight = 100
   identifier = "version"
   url = "/version/"
 
-  [[menu.main]]
+  [[menu.footer]]
   name = "Legal Details"
-  weight = 400
+  weight = 200
   identifier = "legal-details"
   url = "/legal-details/"
