@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../fonts/RobotoSlab.ttf') format('truetype');
+}
+
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto Slab', serif;
+}
+
+.navbar-burger {
+  height: 5.25rem;
+  width: 5.25rem;
 }

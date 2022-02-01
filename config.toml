@@ -3,24 +3,37 @@ languageCode = "en-us"
 title = "Software Developer"
 theme = "anatole"
 enableEmoji = true
+enableGitInfo = true
 summarylength = 10
+
+[outputs]
+home = ["HTML"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 [params]
 title = "I'm CodeHat"
 author = "CodeHat"
-description = "Call me Marc"
+description = """
+Call me Marc
+Software Developer
+"""
 profilePicture = "images/profile.png"
 favicon = "favicons/"
 doNotLoadAnimations = true
 enableRobotsTXT = true
 contentratio = 0.7
 mainSections = []
-googleFonts = [
-  "Ubuntu"
-]
+postSectionName = "blog"
+rssFullContent = true
+#googleFonts = [
+#  "Roboto+Slab:wght@100;400;700"
+#]
 customCss = [
   "css/styles.css"
 ]
+gitUrl = "https://github.com/kodehat/codehat.de"
 
 [params.plausibleAnalytics]
 domain = "codehat.de"
@@ -57,19 +70,31 @@ url = "https://twitter.com/CodeHat/"
   url = "/"
 
   [[menu.main]]
-  name = "Posts"
+  name = "Blog"
   weight = 200
-  identifier = "posts"
-  url = "/posts/"
+  identifier = "blog"
+  url = "/blog/"
 
   [[menu.main]]
-  name = "About"
+  name = "Projects"
   weight = 300
-  identifier = "about"
-  url = "/about/"
+  identifier = "projects"
+  url = "/projects/"
 
   [[menu.main]]
-  name = "Legal Details"
+  name = "Contact"
   weight = 400
+  identifier = "contact"
+  url = "/contact/"
+
+  [[menu.footer]]
+  name = "Version"
+  weight = 100
+  identifier = "version"
+  url = "/version/"
+
+  [[menu.footer]]
+  name = "Legal Details"
+  weight = 200
   identifier = "legal-details"
   url = "/legal-details/"
