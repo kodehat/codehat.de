@@ -37,7 +37,8 @@ func renderPage(w http.ResponseWriter, r *http.Request, page string, ctx context
 	}
 
 	if template.Lookup(page) == nil {
-		http.NotFound(w, r)
+		data := struct{}{}
+		renderPage(w, r, "404.html", ctx, data)
 		return
 	}
 
