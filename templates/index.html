@@ -1,0 +1,19 @@
+{{ define "index.html" }}
+{{ template "head" . }}
+<body>
+
+<main class="container">
+{{ template "nav" . }}
+<img class="avatar" src="/static/avatar.png" alt="Avatar" height=128 width=128 />
+<hgroup class="introduction">
+<p class="chapter">Hello</p>
+<h1>I'm <span data-tooltip="That's me!" data-placement="top">CodeHat</span></h1>
+<p>and welcome to my shiny new website!</p>
+</hgroup>
+
+</main>
+
+{{ template "footer" . }}
+</body>
+</html>
+{{ end }}

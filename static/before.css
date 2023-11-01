@@ -1,0 +1,35 @@
+.chapter {
+  width: fit-content;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--pico-chapter-color);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .0625em;
+  text-transform: uppercase;
+}
+
+.introduction {
+  /*float: left;*/
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+main > hgroup h1 {
+  margin-bottom: calc(var(--pico-spacing) * .5);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+li > fieldset {
+  height: auto;
+  margin-right: inherit;
+  margin-bottom: 0;
+  margin-left: inherit;
+}
