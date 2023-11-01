@@ -24,11 +24,9 @@ func renderPage(w http.ResponseWriter, r *http.Request, page string, ctx context
 	var err error
 
 	if ctx.Value("isDebug").(bool) {
-		log.Println("Using local templates.")
 		dir, _ := os.Getwd()
 		template, err = template.Funcs(functionsMap).ParseGlob(filepath.Join(dir, "templates") + "/*.html")
 	} else {
-		log.Println("Using compiled templates.")
 		template, err = template.Funcs(functionsMap).ParseFS(ctx.Value("templateFiles").(embed.FS), "templates/*.html")
 	}
 
