@@ -23,6 +23,7 @@ func Handle(ctx context.Context, host string, port int) {
 	http.Handle("/static/", staticHandler(ctx, http.StripPrefix("/static/", http.FileServer(http.FS(fs)))))
 
 	http.HandleFunc("/", serveRoot{ctx: ctx}.handle)
+	http.HandleFunc("/ip.html", serveIp{ctx: ctx}.handle)
 
 	log.Printf("Listening on %s:%d\n", host, port)
 	err = http.ListenAndServe(fmt.Sprintf("%s:%d", host, port), nil)

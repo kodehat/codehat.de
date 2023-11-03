@@ -50,7 +50,6 @@ func renderPage(w http.ResponseWriter, r *http.Request, page string, ctx context
 	}
 	err = template.ExecuteTemplate(w, page, pageData)
 	if err != nil {
-		log.Println(err)
 		http.Error(w, err.Error(), 500)
 		return
 	}

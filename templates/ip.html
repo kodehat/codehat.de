@@ -1,0 +1,31 @@
+{{ define "ip.html" }}
+{{ template "head" . }}
+<body>
+
+<main class="container">
+{{ template "nav" . }}
+<hgroup class="introduction">
+<p class="chapter">Your ip  is</p>
+<h1><span data-tooltip="📍" data-placement="top">{{ .Data.IP }}</span></h1>
+<p>do whatever you want with this information!</p>
+</hgroup>
+<section>
+<div role="document">
+<section>
+<aside>
+  <nav>
+    <ul>
+      <li><a href="/">🏠 Home</a></li>
+    </ul>
+  </nav>
+</aside>
+</section>
+</div>
+</section>
+
+</main>
+
+{{ template "footer" . }}
+</body>
+</html>
+{{ end }}
