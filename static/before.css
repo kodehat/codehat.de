@@ -1,3 +1,17 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .chapter {
   width: fit-content;
   -webkit-background-clip: text;
@@ -9,9 +23,6 @@
   text-transform: uppercase;
 }
 
-.introduction {
-  /*float: left;*/
-}
 
 .avatar {
   width: 128px;
@@ -33,3 +44,19 @@ li > fieldset {
   margin-bottom: 0;
   margin-left: inherit;
 }
+
+body > footer, body > header, body > main {
+  padding: var(--pico-block-spacing-vertical) 0;
+}
+
+body > footer .container p:first-of-type {
+  margin-bottom: .25em;
+  font-size: 16px;
+}
+
+body > footer .container p:not(:first-of-type) {
+  margin-bottom: .125em;
+  color: var(--pico-muted-color);
+  font-size: 14px;
+}
+

@@ -12,8 +12,9 @@ type serveIp struct {
 
 func (s serveIp) handle(w http.ResponseWriter, r *http.Request) {
 	data := struct {
-		IP string
-	}{IP: ReadUserIP(r)}
+		Host string
+		IP   string
+	}{Host: r.Host, IP: ReadUserIP(r)}
 	renderPage(w, r, r.URL.Path, s.ctx, data)
 }
 

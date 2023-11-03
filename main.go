@@ -7,7 +7,16 @@ import (
 	"log"
 	"os"
 
+	"github.com/kodehat/codehat.de/pkg/types"
 	"github.com/kodehat/codehat.de/routes"
+)
+
+// build flags
+var (
+	BuildTime  string = "N/A"
+	CommitHash string = "N/A"
+	GoVersion  string = "N/A"
+	GitTag     string = "N/A"
 )
 
 //go:embed templates
@@ -23,12 +32,28 @@ func main() {
 	flag.IntVar(&port, "port", 1313, "port to listen on")
 	var isDebug bool
 	flag.BoolVar(&isDebug, "debug", false, "can be used to load local templates")
+	var isVersion bool
+	flag.BoolVar(&isVersion, "version", false, "can be used to print build information like version and timestamp")
 	flag.Parse()
 	if port <= 0 {
 		log.Fatal("Port must be greater than zero!")
 		os.Exit(1)
 	}
+	buildInformation := types.BuildInformation{
+		BuildTime: BuildTime, CommitHash: CommitHash, GoVersion: GoVersion, GitTag: GitTag,
+	}
+	if isVersion {
+		log.Println("Build time: ", BuildTime)
+		log.Println("Commit: ", CommitHash)
+		log.Println("Go version: ", GoVersion)
+		log.Println("Git tag: ", GitTag)
+		os.Exit(0)
+	}
+	if isDebug {
+		log.Println("Debug mode is turned on.")
+	}
 	ctx := context.Background()
+	ctx = context.WithValue(ctx, "buildInformation", buildInformation)
 	routesCtx := context.WithValue(ctx, "templateFiles", templateFiles)
 	routesCtx = context.WithValue(routesCtx, "staticFiles", staticFiles)
 	routesCtx = context.WithValue(routesCtx, "isDebug", isDebug)
