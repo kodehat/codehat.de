@@ -20,7 +20,7 @@ func Handle(ctx context.Context, host string, port int) {
 		dir, _ := os.Getwd()
 		fs = os.DirFS(filepath.Join(dir, "static"))
 	}
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.FS(fs))))
+	http.Handle("/static/", staticHandler(ctx, http.StripPrefix("/static/", http.FileServer(http.FS(fs)))))
 
 	http.HandleFunc("/", serveRoot{ctx: ctx}.handle)
 
