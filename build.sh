@@ -3,7 +3,7 @@
 clear
 
 TRG_PKG='main'
-BUILD_TIME=$(date +"%Y%m%d.%H%M%S")
+BUILD_TIME=$(date -u +"%Y.%m.%d_%H:%M:%S")
 CommitHash=N/A
 GoVersion=N/A
 GitTag=N/A
