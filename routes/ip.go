@@ -26,8 +26,8 @@ func ReadUserIP(r *http.Request) string {
 	if IPAddress == "" {
 		IPAddress = r.RemoteAddr
 	}
-	if strings.Contains(IPAddress, ":") {
-		IPAddress = strings.Split(IPAddress, ":")[0]
+	if lastColonIdx := strings.LastIndex(IPAddress, ":"); lastColonIdx > -1 {
+		IPAddress = IPAddress[:lastColonIdx]
 	}
 	return IPAddress
 }
