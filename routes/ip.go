@@ -11,10 +11,12 @@ type serveIp struct {
 }
 
 func (s serveIp) handle(w http.ResponseWriter, r *http.Request) {
+	ip := ReadUserIP(r)
 	data := struct {
-		Host string
-		IP   string
-	}{Host: r.Host, IP: ReadUserIP(r)}
+		Host   string
+		IP     string
+		IsIPv4 bool
+	}{Host: r.Host, IP: ip, IsIPv4: IsIPv4(ip)}
 	renderPage(w, r, r.URL.Path, s.ctx, data)
 }
 
@@ -30,4 +32,12 @@ func ReadUserIP(r *http.Request) string {
 		IPAddress = IPAddress[:lastColonIdx]
 	}
 	return IPAddress
+}
+
+func IsIPv4(address string) bool {
+	return strings.Count(address, ":") < 2
+}
+
+func IsIPv6(address string) bool {
+	return strings.Count(address, ":") >= 2
 }

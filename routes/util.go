@@ -37,7 +37,9 @@ func renderPage(w http.ResponseWriter, r *http.Request, page string, ctx context
 	}
 
 	if template.Lookup(page) == nil {
-		data := struct{}{}
+		data := struct {
+			Host string
+		}{Host: r.Host}
 		renderPage(w, r, "404.html", ctx, data)
 		return
 	}
