@@ -14,7 +14,7 @@ func dataMiddleware(ctx context.Context, next http.Handler) http.Handler {
 		firstDotIdx := strings.Index(host, ".")
 		domain := "localhost.localdomain"
 		if firstDotIdx > -1 {
-			domain = host[firstDotIdx:]
+			domain = host[(firstDotIdx + 1):]
 		}
 
 		globalRouteData := types.GlobalRouteData{
