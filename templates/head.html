@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/static/pico.min.css">
     <link rel="stylesheet" href="/static/pico.colors.min.css">
     <link rel="stylesheet" href="/static/after.css">
-    <script async src="https://analytics.thisismy.cloud/script.js" data-account-id="dc755266-771e-46d2-acf8-ffb9c971f02d"></script>
-    <title>codehat.de</title>
+    {{- if not .Data.Global.IsDebug }}
+    <script async src="https://usage.{{ .Data.Global.Domain }}/script.js" data-account-id="dc755266-771e-46d2-acf8-ffb9c971f02d"></script>
+    {{- end }}
+    <title>{{ .Data.Global.Host }}</title>
 </head>
 {{ end }}

@@ -7,8 +7,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/kodehat/codehat.de/pkg/routes"
 	"github.com/kodehat/codehat.de/pkg/types"
-	"github.com/kodehat/codehat.de/routes"
 )
 
 // build flags
@@ -53,9 +53,9 @@ func main() {
 		log.Println("Debug mode is turned on.")
 	}
 	ctx := context.Background()
-	ctx = context.WithValue(ctx, "buildInformation", buildInformation)
-	routesCtx := context.WithValue(ctx, "templateFiles", templateFiles)
-	routesCtx = context.WithValue(routesCtx, "staticFiles", staticFiles)
-	routesCtx = context.WithValue(routesCtx, "isDebug", isDebug)
+	ctx = context.WithValue(ctx, types.ContextKeyBuildInformation, buildInformation)
+	routesCtx := context.WithValue(ctx, types.ContextKeyTemplatesFiles, templateFiles)
+	routesCtx = context.WithValue(routesCtx, types.ContextKeyStaticFiles, staticFiles)
+	routesCtx = context.WithValue(routesCtx, types.ContextKeyIsDebug, isDebug)
 	routes.Handle(routesCtx, host, port)
 }

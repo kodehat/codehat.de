@@ -1,23 +1,24 @@
 package routes
 
 import (
-	"context"
 	"net/http"
 	"strings"
+
+	"github.com/kodehat/codehat.de/pkg/types"
 )
 
 type serveIp struct {
-	ctx context.Context
 }
 
 func (s serveIp) handle(w http.ResponseWriter, r *http.Request) {
 	ip := ReadUserIP(r)
 	data := struct {
-		Host   string
 		IP     string
 		IsIPv4 bool
-	}{Host: r.Host, IP: ip, IsIPv4: IsIPv4(ip)}
-	renderPage(w, r, r.URL.Path, s.ctx, data)
+	}{IP: ip, IsIPv4: IsIPv4(ip)}
+	routeData := r.Context().Value(types.ContextKeyRouteData).(*types.RouteData)
+	(*routeData).Local = data
+	renderPage(w, r, r.URL.Path)
 }
 
 func ReadUserIP(r *http.Request) string {

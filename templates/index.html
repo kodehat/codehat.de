@@ -29,8 +29,8 @@
 <footer>
 <div class="container">
 <p>Created by CodeHat 🎩</p>
-<p>Generated at: {{ .Data.BuildInformation.BuildTime }}</p>
-<p>Commit: {{ .Data.BuildInformation.CommitHash }}</p>
+<p>Generated at: {{ .Data.Global.BuildInformation.BuildTime }}</p>
+<p>Commit: {{ .Data.Global.BuildInformation.CommitHash }}</p>
 </div>
 </footer>
 {{ template "footer" . }}

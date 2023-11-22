@@ -5,8 +5,8 @@
 <main class="container">
 {{ template "nav" . }}
 <hgroup class="introduction">
-<p class="chapter">You are browsing with {{ if .Data.IsIPv4 }}IPv4{{ else }}IPv6{{ end }} from</p>
-<h1><span data-tooltip="📍" data-placement="top">{{ .Data.IP }}</span></h1>
+<p class="chapter">You are browsing with {{ if .Data.Local.IsIPv4 }}IPv4{{ else }}IPv6{{ end }} from</p>
+<h1><span data-tooltip="📍" data-placement="top">{{ .Data.Local.IP }}</span></h1>
 <p>do whatever you want with this information!</p>
 </hgroup>
 <section>
