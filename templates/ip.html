@@ -1,36 +1,28 @@
-{{ define "ip.html" }}
-{{ template "head" . }}
+{{- define "ip.html" -}}
+{{- template "head" . }}
 <body>
+  <main class="container">
+  {{ template "nav" . }}
+  <hgroup class="introduction">
+  <p class="chapter">You are browsing with {{ if .Data.Local.IsIPv4 }}IPv4{{ else }}IPv6{{ end }} from</p>
+  <h1><span data-tooltip="📍" data-placement="top">{{ .Data.Local.IP }}</span></h1>
+  <p>do whatever you want with this information!</p>
+  </hgroup>
+  <section>
+  <div role="document">
+  <section>
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="/">🏠 Home</a></li>
+      </ul>
+    </nav>
+  </aside>
+  </section>
+  </div>
+  </section>
 
-<main class="container">
-{{ template "nav" . }}
-<hgroup class="introduction">
-<p class="chapter">You are browsing with {{ if .Data.Local.IsIPv4 }}IPv4{{ else }}IPv6{{ end }} from</p>
-<h1><span data-tooltip="📍" data-placement="top">{{ .Data.Local.IP }}</span></h1>
-<p>do whatever you want with this information!</p>
-</hgroup>
-<section>
-<div role="document">
-<section>
-<aside>
-  <nav>
-    <ul>
-      <li><a href="/">🏠 Home</a></li>
-    </ul>
-  </nav>
-</aside>
-</section>
-</div>
-</section>
-
-</main>
-<footer>
-<div class="container">
-<p>Created by CodeHat 🎩</p>
-<p>Generated at: {{ .Data.Global.BuildInformation.BuildTime }}</p>
-<p>Commit: {{ .Data.Global.BuildInformation.CommitHash }}</p>
-</div>
-</footer>
+  </main>
 {{ template "footer" . }}
 </body>
 </html>

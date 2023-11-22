@@ -1,17 +1,17 @@
-{{ define "nav" }}
-<nav>
-  <ul>
-    <li><a href="/"><strong>{{ .Data.Global.Host }}</strong></a></li>
-  </ul>
-  <ul>
-    <li>
-      <fieldset>
-        <label>
-          <input type="checkbox" role="switch" checked data-theme-toggle />
-          <span id="light-switch-text">🌚</span>
-        </label>
-      </fieldset>
-    </li>
-  </ul>
-</nav>
-{{ end }}
+{{- define "nav" }}
+    <nav>
+      <ul>
+        <li><a href="/"><strong>{{ .Data.Global.Host }}</strong></a></li>
+      </ul>
+      <ul>
+        <li>
+          <fieldset>
+            <label>
+              <input type="checkbox" role="switch" checked data-theme-toggle />
+              <span id="light-switch-text">🌚</span>
+            </label>
+          </fieldset>
+        </li>
+      </ul>
+    </nav>
+{{- end -}}

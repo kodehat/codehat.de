@@ -1,3 +1,10 @@
-{{ define "footer" -}}
+{{- define "footer" }}
+  <footer>
+    <div class="container">
+    <p>Created by CodeHat 🎩</p>
+    <p>Generated at: {{ .Data.Global.BuildInformation.BuildTime }}</p>
+    <p>Commit: {{ .Data.Global.BuildInformation.CommitHash }}</p>
+  </div>
+  </footer>
   <script src="/static/main.js" type="text/javascript"></script>
-{{- end }}
+{{- end -}}

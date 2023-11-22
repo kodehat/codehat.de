@@ -1,17 +1,17 @@
-{{ define "head" }}
+{{- define "head" -}}
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='shortcut icon' href='/static/favicon.ico'>
-    <link rel="stylesheet" href="/static/before.css">
-    <link rel="stylesheet" href="/static/pico.min.css">
-    <link rel="stylesheet" href="/static/pico.colors.min.css">
-    <link rel="stylesheet" href="/static/after.css">
-    {{- if not .Data.Global.IsDebug }}
-    <script async src="https://usage.{{ .Data.Global.Domain }}/script.js" data-account-id="dc755266-771e-46d2-acf8-ffb9c971f02d"></script>
-    {{- end }}
-    <title>{{ .Data.Global.Host }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='shortcut icon' href='/static/favicon.ico'>
+  <link rel="stylesheet" href="/static/before.css">
+  <link rel="stylesheet" href="/static/pico.min.css">
+  <link rel="stylesheet" href="/static/pico.colors.min.css">
+  <link rel="stylesheet" href="/static/after.css">
+  {{- if not .Data.Global.IsDebug }}
+  <script async src="https://usage.{{ .Data.Global.Domain }}/script.js" data-account-id="dc755266-771e-46d2-acf8-ffb9c971f02d"></script>
+  {{- end }}
+  <title>{{ .Data.Global.Host }}</title>
 </head>
-{{ end }}
+{{- end -}}
