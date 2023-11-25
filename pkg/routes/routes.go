@@ -25,6 +25,7 @@ func Handle(ctx context.Context, host string, port int) {
 	http.Handle("/static/", staticHandler(ctx, http.StripPrefix("/static/", http.FileServer(http.FS(fs)))))
 	http.Handle("/", dataMiddleware(ctx, http.HandlerFunc(serveRoot{}.handle)))
 	http.Handle("/ip.html", dataMiddleware(ctx, http.HandlerFunc(serveIp{}.handle)))
+	http.Handle("/legal-details.html", dataMiddleware(ctx, http.HandlerFunc(serveLegalDetails{}.handle)))
 
 	log.Printf("Listening on %s:%d\n", host, port)
 	err = http.ListenAndServe(fmt.Sprintf("%s:%d", host, port), nil)
