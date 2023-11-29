@@ -25,12 +25,20 @@ func ReadUserIP(r *http.Request) string {
 	IPAddress := r.Header.Get("X-Real-Ip")
 	if IPAddress == "" {
 		IPAddress = r.Header.Get("X-Forwarded-For")
+		// "X-Forwarded-For" contains <client>, <proxy1>, <proxy2>...
+		// and only the client is interesting.
+		if commaIdx := strings.Index(IPAddress, ","); commaIdx > -1 {
+			IPAddress = IPAddress[:commaIdx]
+		}
 	}
 	if IPAddress == "" {
 		IPAddress = r.RemoteAddr
 	}
 	if lastColonIdx := strings.LastIndex(IPAddress, ":"); lastColonIdx > -1 {
-		IPAddress = IPAddress[:lastColonIdx]
+		// IPv6 can contain double colon. Fix if no port is provided.
+		if string(IPAddress[lastColonIdx-1]) != ":" {
+			IPAddress = IPAddress[:lastColonIdx]
+		}
 	}
 	return IPAddress
 }
