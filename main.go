@@ -14,9 +14,8 @@ import (
 // build flags
 var (
 	BuildTime  string = "N/A"
-	CommitHash string = "N/A"
+	CommitHash string
 	GoVersion  string = "N/A"
-	GitTag     string = "N/A"
 )
 
 //go:embed templates
@@ -40,13 +39,12 @@ func main() {
 		os.Exit(1)
 	}
 	buildInformation := types.BuildInformation{
-		BuildTime: BuildTime, CommitHash: CommitHash, GoVersion: GoVersion, GitTag: GitTag,
+		BuildTime: BuildTime, CommitHash: CommitHash, GoVersion: GoVersion,
 	}
 	if isVersion {
 		log.Println("Build time: ", BuildTime)
 		log.Println("Commit: ", CommitHash)
 		log.Println("Go version: ", GoVersion)
-		log.Println("Git tag: ", GitTag)
 		os.Exit(0)
 	}
 	if isDebug {
