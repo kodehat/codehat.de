@@ -23,7 +23,7 @@ func Handle(ctx context.Context, host string, port int) {
 		fs = os.DirFS(filepath.Join(dir, "static"))
 	}
 	http.Handle("/static/", staticHandler(ctx, http.StripPrefix("/static/", http.FileServer(http.FS(fs)))))
-	http.Handle("/robots.txt", http.HandlerFunc(serverRobotsTxt{}.handle))
+	http.Handle("/robots.txt", http.HandlerFunc(serveRobotsTxt{}.handle))
 	http.Handle("/.well-known/webfinger", http.HandlerFunc(serveWebFinger{}.handle))
 	http.Handle("/", dataMiddleware(ctx, http.HandlerFunc(serveRoot{}.handle)))
 	http.Handle("/ip.html", dataMiddleware(ctx, http.HandlerFunc(serveIp{}.handle)))

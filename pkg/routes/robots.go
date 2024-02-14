@@ -9,9 +9,9 @@ const ROBOTS_TXT_CONTENT string = `User-agent: *
 Disallow:
 `
 
-type serverRobotsTxt struct{}
+type serveRobotsTxt struct{}
 
-func (s serverRobotsTxt) handle(w http.ResponseWriter, r *http.Request) {
+func (s serveRobotsTxt) handle(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprint(w, ROBOTS_TXT_CONTENT)
