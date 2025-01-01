@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 clear
 
@@ -13,7 +13,7 @@ then
 fi
 
 GH=$(git log -1 --pretty=format:%h || echo 'N/A')
-if [[ GH =~ 'fatal' ]];
+if [[ $GH =~ 'fatal' ]];
 then
     CommitHash=N/A
 else
